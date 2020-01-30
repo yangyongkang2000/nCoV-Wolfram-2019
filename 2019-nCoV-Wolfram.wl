@@ -1,5 +1,7 @@
 Module[{Data = 
-   CloudGet[CloudObjects["https://wolfr.am/JXRppoDB"]], HubeiData, HubeiCityName, ConfirmedCount, 
+  CloudGet@CloudObject[
+ "https://www.wolframcloud.com/obj/397522f3-83d3-4df8-b728-\
+7ac107a91fad"], HubeiData, HubeiCityName, ConfirmedCount, 
   HubeiCityConfirmedCount, 
   ProvinceName = {Entity[
      "AdministrativeDivision", {"Hubei", "China"}], 
