@@ -1,6 +1,5 @@
 Module[{Data = 
-   Import["/Users/yangyongkang/Downloads/2019nCoV-master/crawler/\
-history-areas.json"], HubeiData, HubeiCityName, ConfirmedCount, 
+   CloudGet[CloudObjects["https://wolfr.am/JXRppoDB"]], HubeiData, HubeiCityName, ConfirmedCount, 
   HubeiCityConfirmedCount, 
   ProvinceName = {Entity[
      "AdministrativeDivision", {"Hubei", "China"}], 
