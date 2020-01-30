@@ -36,7 +36,7 @@ Module[{Data =
     Entity["Country", "Macau"], 
     Entity["AdministrativeDivision", {"Qinghai", "China"}], 
     Entity["AdministrativeDivision", {"Xizang", "China"}]}, p1, p2, 
-  p3, p4}, ConfirmedCount = ("confirmedCount" /. Data[[3 ;; -1]]); 
+  p3, p4,p5}, ConfirmedCount = ("confirmedCount" /. Data[[3 ;; -1]]); 
  HubeiData = ("cities" /. Data[[3]]); 
  HubeiCityName = "cityName" /. HubeiData; 
  HubeiCityConfirmedCount = "confirmedCount" /. HubeiData; 
@@ -55,7 +55,7 @@ Module[{Data =
     ProvinceName[[#]] -> ConfirmedCount[[#]][[k]] & /@ Range[17], 
     PlotRange -> {1, 999}, ColorFunction -> "Rainbow", 
     GeoLabels -> True], {k, 1, 7}]; 
- Table[GeoBubbleChart[
+ p5=Table[GeoBubbleChart[
    ProvinceName[[#]] -> ConfirmedCount[[#]][[k]] & /@ Range[17], 
    GeoBackground -> "Satellite", ColorFunction -> "Rainbow"], {k, 1, 
    7}]]
