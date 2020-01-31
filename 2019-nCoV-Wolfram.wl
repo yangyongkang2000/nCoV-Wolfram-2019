@@ -1,7 +1,5 @@
-Module[{Data = 
-  CloudGet@CloudObject[
- "https://www.wolframcloud.com/obj/397522f3-83d3-4df8-b728-\
-7ac107a91fad"], HubeiData, HubeiCityName, ConfirmedCount, 
+Module[{Data = CloudGet@CloudObject["https://wolfr.am/JXRppoDB"]
+  , HubeiData, HubeiCityName, ConfirmedCount, 
   HubeiCityConfirmedCount, 
   ProvinceName = {Entity[
      "AdministrativeDivision", {"Hubei", "China"}], 
@@ -60,4 +58,4 @@ Module[{Data =
  p5=Table[GeoBubbleChart[
    ProvinceName[[#]] -> ConfirmedCount[[#]][[k]] & /@ Range[17], 
    GeoBackground -> "Satellite", ColorFunction -> "Rainbow"], {k, 1, 
-   7}]]
+   7}];]
